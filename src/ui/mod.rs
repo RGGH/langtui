@@ -7,7 +7,7 @@ mod summary;
 mod heatmap;
 mod streak;
 
-use ratatui::{layout::Rect, style::Style, widgets::Block, Frame};
+use ratatui::{style::Style, widgets::Block, Frame};
 use crate::app::{App, Screen};
 use theme::BG;
 

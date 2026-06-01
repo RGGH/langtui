@@ -25,22 +25,22 @@ pub fn draw(f: &mut Frame, app: &App, area: Rect) {
     let pulse = (app.tick / 12) % 3;
     let title = vec![
         Line::from(vec![Span::styled(
-            "  🇪🇸  Reflexive Verb Drill  🇪🇸",
+            "  🇪🇸  Verb Drill  🇪🇸",
             Style::default().fg(PURPLE).add_modifier(Modifier::BOLD),
         )]),
-        Line::from(""),
-        Line::from(vec![Span::styled(
-            match pulse {
-                0 => "·  irse · quedarse · ponerse · llevarse · acordarse  ·",
-                1 => "—  irse · quedarse · ponerse · llevarse · acordarse  —",
-                _ => "›  irse · quedarse · ponerse · llevarse · acordarse  ‹",
-            },
-            Style::default().fg(LAVENDER),
-        )]),
-        Line::from(vec![Span::styled(
-            "   yo · tú · él/ella  ·  4 tenses  ·  60 questions",
-            Style::default().fg(DIM_WHITE),
-        )]),
+        // Line::from(""),
+        // Line::from(vec![Span::styled(
+        //     match pulse {
+        //         0 => "·  irse · quedarse · ponerse · llevarse · acordarse  ·",
+        //         1 => "—  irse · quedarse · ponerse · llevarse · acordarse  —",
+        //         _ => "›  irse · quedarse · ponerse · llevarse · acordarse  ‹",
+        //     },
+        //     Style::default().fg(LAVENDER),
+        // )]),
+        // Line::from(vec![Span::styled(
+        //     "   yo · tú · él/ella  ·  4 tenses  ·  60 questions",
+        //     Style::default().fg(DIM_WHITE),
+        // )]),
     ];
     f.render_widget(
         Paragraph::new(title)
